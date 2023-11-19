@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyReading", "Currency
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyRate.API", "CurrencyRate.API\CurrencyRate.API.csproj", "{4B705544-F0D5-4544-BE58-AEE3BFD0C915}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "CurrencyRate", "CurrencyRate\CurrencyRate.esproj", "{593945A4-2544-4216-9791-8EB1C5FDF926}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{DC8103BE-2EF0-4944-9A60-74B6FE8A36FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{7B1FE63A-C910-479A-9CF9-69E860E37CFB}"
@@ -21,11 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameteqTestApp.BL.AppServic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameteqTestApp.BL.AppServices.Interfaces", "BusinessLogic\GameteqTestApp.BL.AppServices.Interfaces\GameteqTestApp.BL.AppServices.Interfaces.csproj", "{07AFB6CF-9935-4B8C-B24C-D2D303832DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameteqTestApp.DA.EFCore.Interfaces", "DataAccess\GameteqTestApp.DA.EFCore.Interfaces\GameteqTestApp.DA.EFCore.Interfaces.csproj", "{8B38AB34-49C7-489B-A78D-D700481589F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameteqTestApp.DA.EFCore.Interfaces", "DataAccess\GameteqTestApp.DA.EFCore.Interfaces\GameteqTestApp.DA.EFCore.Interfaces.csproj", "{8B38AB34-49C7-489B-A78D-D700481589F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameteqTestApp.DA.Services", "DataAccess\GameteqTestApp.DA.Services\GameteqTestApp.DA.Services.csproj", "{5F3B08CC-7478-4A5F-83AC-384A320802AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameteqTestApp.DA.Services", "DataAccess\GameteqTestApp.DA.Services\GameteqTestApp.DA.Services.csproj", "{5F3B08CC-7478-4A5F-83AC-384A320802AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameteqTestApp.DA.Services.Interfaces", "DataAccess\GameteqTestApp.DA.Services.Interfaces\GameteqTestApp.DA.Services.Interfaces.csproj", "{14CB1EA2-5DB3-41B7-877A-ACF3C93E957E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameteqTestApp.DA.Services.Interfaces", "DataAccess\GameteqTestApp.DA.Services.Interfaces\GameteqTestApp.DA.Services.Interfaces.csproj", "{14CB1EA2-5DB3-41B7-877A-ACF3C93E957E}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "CurrencyRate", "CurrencyRate\CurrencyRate.esproj", "{851C6D69-78C6-4074-AF4E-E4832D39E3B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +41,6 @@ Global
 		{4B705544-F0D5-4544-BE58-AEE3BFD0C915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B705544-F0D5-4544-BE58-AEE3BFD0C915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B705544-F0D5-4544-BE58-AEE3BFD0C915}.Release|Any CPU.Build.0 = Release|Any CPU
-		{593945A4-2544-4216-9791-8EB1C5FDF926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{593945A4-2544-4216-9791-8EB1C5FDF926}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{593945A4-2544-4216-9791-8EB1C5FDF926}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{593945A4-2544-4216-9791-8EB1C5FDF926}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{593945A4-2544-4216-9791-8EB1C5FDF926}.Release|Any CPU.Build.0 = Release|Any CPU
-		{593945A4-2544-4216-9791-8EB1C5FDF926}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{A0E51BDC-165C-4A43-9C24-45C26F5AC48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A0E51BDC-165C-4A43-9C24-45C26F5AC48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E51BDC-165C-4A43-9C24-45C26F5AC48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +69,12 @@ Global
 		{14CB1EA2-5DB3-41B7-877A-ACF3C93E957E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14CB1EA2-5DB3-41B7-877A-ACF3C93E957E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14CB1EA2-5DB3-41B7-877A-ACF3C93E957E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
