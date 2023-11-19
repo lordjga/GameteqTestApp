@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameteqTestApp.DA.EFCore.Interfaces\GameteqTestApp.DA.EFCore.Interfaces.csproj" />
+    <ProjectReference Include="..\GameteqTestApp.DA.Model\GameteqTestApp.DA.Model.csproj" />
+    <ProjectReference Include="..\GameteqTestApp.DA.Services.Interfaces\GameteqTestApp.DA.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
