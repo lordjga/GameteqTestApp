@@ -1,0 +1,19 @@
+.main-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.active {
+  text-decoration: underline;
+}

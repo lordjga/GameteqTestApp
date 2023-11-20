@@ -9,4 +9,8 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\CurrencyRate</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\app\currency-rate\home\components\" />
+    <Folder Include="src\app\currency-rate\home\services\" />
+  </ItemGroup>
 </Project>
