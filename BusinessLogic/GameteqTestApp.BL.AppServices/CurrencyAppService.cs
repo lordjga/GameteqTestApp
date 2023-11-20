@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace GameteqTestApp.BL.AppServices
 {
-	public class CurrencyReader : ICurrencyReader
+	public class CurrencyAppService : ICurrencyAppService
     {
 		private const string GlobalDelimeter = "Date";
 		private const char RowDelimeter = '\n';
@@ -16,7 +16,7 @@ namespace GameteqTestApp.BL.AppServices
 		private readonly ICurrencyService _currencyService;
         private readonly ICurrencyRateService _currencyRateService;
 
-		public CurrencyReader(ICurrencyService currencyService, ICurrencyRateService currencyRateService)
+		public CurrencyAppService(ICurrencyService currencyService, ICurrencyRateService currencyRateService)
         {
             _currencyService = currencyService;
             _currencyRateService = currencyRateService;

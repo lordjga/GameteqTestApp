@@ -1,19 +1,36 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using GameteqTestApp.BL.AppServices;
+using GameteqTestApp.DA.EFCore.Core;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(ConfigureContainer);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options => options.AddPolicy("Cors", builder =>
+{
+    builder
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+}));
+
+builder.Services.AddDbContext<CurrencyAppContext>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
@@ -22,4 +39,28 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors("Cors");
+
+MigrateDatabase(app);
+
 app.Run();
+
+void ConfigureContainer(ContainerBuilder builder)
+{
+	builder.RegisterModule<AppServicesRegistrationModule>();
+	builder.RegisterModule<EfCoreRegistrationModule>();
+	builder.RegisterModule<DaServicesRegistrationModule>();
+}
+
+void MigrateDatabase(IApplicationBuilder app)
+{
+	using (var serviceScope = app.ApplicationServices
+		.GetRequiredService<IServiceScopeFactory>()
+		.CreateScope())
+	{
+		using (var context = serviceScope.ServiceProvider.GetService<CurrencyAppContext>())
+		{
+			context.Database.Migrate();
+		}
+	}
+}

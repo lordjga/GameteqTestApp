@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\DataAccess\GameteqTestApp.DA.Model\GameteqTestApp.DA.Model.csproj" />
     <ProjectReference Include="..\..\DataAccess\GameteqTestApp.DA.Services.Interfaces\GameteqTestApp.DA.Services.Interfaces.csproj" />
     <ProjectReference Include="..\GameteqTestApp.BL.AppServices.Interfaces\GameteqTestApp.BL.AppServices.Interfaces.csproj" />

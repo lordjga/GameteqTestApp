@@ -7,8 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\GameteqTestApp.BL.AppServices\GameteqTestApp.BL.AppServices.csproj" />
+    <ProjectReference Include="..\DataAccess\GameteqTestApp.DA.EFCore\GameteqTestApp.DA.EFCore.csproj" />
+    <ProjectReference Include="..\DataAccess\GameteqTestApp.DA.Services\GameteqTestApp.DA.Services.csproj" />
   </ItemGroup>
 
 </Project>

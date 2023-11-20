@@ -2,7 +2,7 @@
 
 namespace GameteqTestApp.BL.AppServices.Interfaces
 {
-	public interface ICurrencyReader
+	public interface ICurrencyAppService
 	{
 		Task<IEnumerable<Currency>> GetNewCurrenciesAsync(int year);
 

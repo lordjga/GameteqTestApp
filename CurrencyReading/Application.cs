@@ -4,9 +4,9 @@ namespace CurrencyReading
 {
 	class Application
 	{
-		protected readonly ICurrencyReader _currencyReader;
+		protected readonly ICurrencyAppService _currencyReader;
 
-		public Application(ICurrencyReader currencyReader)
+		public Application(ICurrencyAppService currencyReader)
 		{
 			_currencyReader = currencyReader;
 		}
