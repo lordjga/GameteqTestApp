@@ -5,18 +5,18 @@ using GameteqTestApp.DA.EFCore.Repositories.Base;
 namespace GameteqTestApp.DA.EFCore.Core
 {
 	public class UnitOfWork : IUnitOfWork
-    {
-        private readonly CurrencyAppContext _context;
-        private Dictionary<Type, object> _repositories;
+	{
+		private readonly CurrencyAppContext _context;
+		private Dictionary<Type, object> _repositories;
 
-        public UnitOfWork(CurrencyAppContext context)
-        {
+		public UnitOfWork(CurrencyAppContext context)
+		{
 			_context = context;
 			_repositories = new Dictionary<Type, object>();
 		}
 
-        public IBaseRepository<TEntity> GetBaseRepository<TEntity>() where TEntity : class
-        {
+		public IBaseRepository<TEntity> GetBaseRepository<TEntity>() where TEntity : class
+		{
 			if (_repositories.ContainsKey(typeof(TEntity)))
 			{
 				return (IBaseRepository<TEntity>)_repositories[typeof(TEntity)];
@@ -33,8 +33,8 @@ namespace GameteqTestApp.DA.EFCore.Core
 		}
 
 		public void Dispose()
-        {
+		{
 			_context.Dispose();
 		}
-    }
+	}
 }

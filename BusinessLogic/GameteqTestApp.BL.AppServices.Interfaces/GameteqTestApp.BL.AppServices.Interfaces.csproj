@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\DataAccess\GameteqTestApp.DA.Model\GameteqTestApp.DA.Model.csproj" />
+    <ProjectReference Include="..\GameteqTestApp.BL.ViewModels\GameteqTestApp.BL.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

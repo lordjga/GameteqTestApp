@@ -19,11 +19,11 @@ namespace GameteqTestApp.DA.Services
 
 		private void PrepareBeforeDatabaseSave(IEnumerable<CurrencyRate> items)
 		{
-            foreach (var item in items)
-            {
+			foreach (var item in items)
+			{
 				if (item.Currency != null)
 					item.Currency = null;
-            }
-        }
+			}
+		}
 	}
 }

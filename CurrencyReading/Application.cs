@@ -22,7 +22,7 @@ namespace CurrencyReading
 				return;
 			}
 
-			var list = await _currencyReader.GetNewCurrenciesAsync(year);
+			var list = await _currencyReader.ParseNewCurrenciesAsync(year);
 
 			if(list != null) 
 				_currencyReader.SaveCurrencies(list);

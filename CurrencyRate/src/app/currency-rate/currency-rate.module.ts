@@ -1,10 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CurrencyRateComponent } from './currency-rate.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeModule } from './home/home.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
     HomeModule,
 
-    MatToolbarModule
+    MatToolbarModule,
+
   ],
   exports: [
     CurrencyRateComponent

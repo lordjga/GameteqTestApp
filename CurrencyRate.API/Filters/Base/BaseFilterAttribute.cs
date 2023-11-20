@@ -15,20 +15,20 @@ public class BaseFilterAttribute : ExceptionFilterAttribute
 	}
 
 	public void OnException(ExceptionContext context)
-    {
-        var actionName = context.ActionDescriptor.DisplayName;
-        var exceptionStack = context.Exception.StackTrace;
-        var exceptionMessage = context.Exception.Message;
-        var warning = $"Method {actionName} threw an exception: \n\n{exceptionMessage}";
+	{
+		var actionName = context.ActionDescriptor.DisplayName;
+		var exceptionStack = context.Exception.StackTrace;
+		var exceptionMessage = context.Exception.Message;
+		var warning = $"Method {actionName} threw an exception: \n\n{exceptionMessage}";
 
-        context.Result = new ContentResult
-        {
-            Content = warning,
-            StatusCode = (int)HttpStatusCode.BadRequest
-        };
+		context.Result = new ContentResult
+		{
+			Content = warning,
+			StatusCode = (int)HttpStatusCode.BadRequest
+		};
 
 		_logger.LogWarning(warning + $"\n{exceptionStack}");
 
-        context.ExceptionHandled = true;
-    }
+		context.ExceptionHandled = true;
+	}
 }

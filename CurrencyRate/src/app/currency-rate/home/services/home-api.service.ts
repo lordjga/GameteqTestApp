@@ -11,8 +11,7 @@ import { environment } from "../../../../environments/environment";
 export class HomeApiService {
   constructor(private httpClient: HttpClient) { }
 
-  public getAllCurrencies(): Observable<Currency[]> {
-    return this.httpClient.get<Currency[]>(environment.baseUrl + "api/Currency/getAllCurrencies");
-      //.pipe(map(result => this.userMapService.convertRequestToUsers(result)));
+  public getRequest<T>(url: string): Observable<T> {
+    return this.httpClient.get<T>(environment.baseUrl + url);
   }
 }

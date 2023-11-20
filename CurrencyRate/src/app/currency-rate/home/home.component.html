@@ -1,1 +1,10 @@
-<p>home works!</p>
+<div>
+  <div style="display: inline-block; vertical-align: central; ">
+    <app-currency-selection [Currencies]="getCurrencyData$ | async"
+                            (dataSelected)="getRate($event)">
+    </app-currency-selection>
+  </div>
+  <div>
+    <label *ngIf="currencyRate"> CZN rate on date {{ currencyRate.date | date:'MM/dd/yyyy' }} is {{ currencyRate.rate }} </label>
+  </div>
+</div>

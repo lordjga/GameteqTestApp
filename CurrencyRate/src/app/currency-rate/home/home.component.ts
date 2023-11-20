@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { HomeService } from './services/home-service';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Currency } from '../shared/models/currency.model';
+import { CurrencySelect } from '../shared/models/currency-select.model';
+import { CurrencyRate } from '../shared/models/currency-rate.model';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +11,26 @@ import { Currency } from '../shared/models/currency.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  currencyRate: CurrencyRate | undefined;
+
   constructor(
     private homeService: HomeService) { }
 
   ngOnInit(): void {
     if (!this.homeService.isDataLoaded)
-      this.homeService.getAllCurrenciesFromServer();
+      this.homeService.loadAllCurrenciesFromServer();
   }
 
-  get getUserData$(): Observable<Currency[]> {
-    return this.homeService.getUserData$;
+  get getCurrencyData$(): Observable<Currency[]> {
+    return this.homeService.getCurrencyData$;
   }
 
+  getRate(item: CurrencySelect) {
+    console.log(item);
+    this.homeService.loadRate(item).subscribe(res => {
+      console.log(res);
+      this.currencyRate = res;
+    });;
+  }
 }

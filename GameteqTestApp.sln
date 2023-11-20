@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameteqTestApp.DA.Services.
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "CurrencyRate", "CurrencyRate\CurrencyRate.esproj", "{851C6D69-78C6-4074-AF4E-E4832D39E3B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameteqTestApp.BL.ViewModels", "BusinessLogic\GameteqTestApp.BL.ViewModels\GameteqTestApp.BL.ViewModels.csproj", "{D92C167E-F07F-4D3F-B784-DC461F73EDDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{851C6D69-78C6-4074-AF4E-E4832D39E3B8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D92C167E-F07F-4D3F-B784-DC461F73EDDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92C167E-F07F-4D3F-B784-DC461F73EDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92C167E-F07F-4D3F-B784-DC461F73EDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92C167E-F07F-4D3F-B784-DC461F73EDDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{8B38AB34-49C7-489B-A78D-D700481589F6} = {7B1FE63A-C910-479A-9CF9-69E860E37CFB}
 		{5F3B08CC-7478-4A5F-83AC-384A320802AF} = {7B1FE63A-C910-479A-9CF9-69E860E37CFB}
 		{14CB1EA2-5DB3-41B7-877A-ACF3C93E957E} = {7B1FE63A-C910-479A-9CF9-69E860E37CFB}
+		{D92C167E-F07F-4D3F-B784-DC461F73EDDF} = {DC8103BE-2EF0-4944-9A60-74B6FE8A36FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE4D2A6B-D640-4489-B7F1-F1C2FAC07B2D}

@@ -46,37 +46,5 @@ namespace GameteqTestApp.DA.EFCore.Repositories.Base
 		{
 			return GetAllWithInclude(noTracking, includes).Where(filter);
 		}
-
-
-
-		public bool Delete(TEntity entity)
-		{
-			throw new NotImplementedException();
-		}
-
-		public bool Delete<TKey>(TKey id)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void DeleteRange(IEnumerable<TEntity> entities)
-		{
-			throw new NotImplementedException();
-		}
-
-		public bool Exists<TKey>(TKey id)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void Update(TEntity entity)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void UpdateRange(IEnumerable<TEntity> entities)
-		{
-			throw new NotImplementedException();
-		}
 	}
 }
