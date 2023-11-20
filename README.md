@@ -10,3 +10,6 @@ CurrencyRate.API:
   ASP.NET Core Web API application which has two endpoints
     http://localhost:40443/api/currency/get - returns all currencies stored in the db
     http://localhost:40443/api/currency/getRate?currencyId={int}&date={yyyy-MM-dd} - returns a currency rate object on a specified day for the selected currency in relation to the Czech crown
+
+Used tools:
+  .Net 7.0, Angular 16.2.0, Autofac 7.1.0, EFCore 7.0.14, MsSQLServer etc.
