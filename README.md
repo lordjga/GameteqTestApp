@@ -4,7 +4,7 @@ CurrencyReading:
   Console application which loads currencies from https://www.cnb.cz/en/financial_markets/foreign_exchange_market/exchange_rate_fixing/year.txt?year=2023, parses and stores data in the DB. Year is entered manually.
 
 CurrencyRate:
-  Angular SPA which displays currencies with ability to select currency and date.
+  Angular (16.2) SPA which displays currencies with ability to select currency and date.
 
 CurrencyRate.API:
   ASP.NET Core Web API application which has two endpoints
