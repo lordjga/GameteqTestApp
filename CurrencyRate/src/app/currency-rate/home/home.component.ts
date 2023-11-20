@@ -27,9 +27,7 @@ export class HomeComponent {
   }
 
   getRate(item: CurrencySelect) {
-    console.log(item);
     this.homeService.loadRate(item).subscribe(res => {
-      console.log(res);
       this.currencyRate = res;
     });;
   }

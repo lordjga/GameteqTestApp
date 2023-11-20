@@ -1,5 +1,5 @@
-<div>
-  <div style="display: inline-block; vertical-align: central; ">
+<div class="center">
+  <div>
     <app-currency-selection [Currencies]="getCurrencyData$ | async"
                             (dataSelected)="getRate($event)">
     </app-currency-selection>
